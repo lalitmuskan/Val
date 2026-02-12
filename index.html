@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Will You Be My Valentine?</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #ffe6f2;
+            text-align: center;
+            padding: 50px;
+            color: #d63384;
+        }
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+        img {
+            width: 200px;
+            height: auto;
+            margin: 20px;
+            border-radius: 10px;
+        }
+        button {
+            background-color: #ff69b4;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1.2em;
+            margin: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #ff1493;
+        }
+        #response {
+            font-size: 1.5em;
+            margin-top: 20px;
+        }
+        #note {
+            display: none;
+            margin-top: 30px;
+            padding: 20px;
+            background-color: #ffb3d9;
+            border-radius: 10px;
+            font-size: 1.2em;
+        }
+        #note img {
+            width: 300px;
+            height: auto;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Will You Be My Valentine? 💖</h1>
+    <img src="https://via.placeholder.com/200x200/ff69b4/ffffff?text=Hearts" alt="Cute hearts">
+    <img src="https://via.placeholder.com/200x200/d63384/ffffff?text=Flowers" alt="Cute flowers">
+    <p>Hey cutie, I've been thinking about you all day! Would you make me the happiest by being my Valentine? 😘</p>
+    <button onclick="respond('Yes!')">Yes! 💕</button>
+    <button onclick="respond('Of course!')">Of course! ❤️</button>
+    <button onclick="noResponse()">No 😢</button>
+    <div id="response"></div>
+    <div id="note">
+        <p>Yay! You said yes, and that makes my heart explode with joy! 💥❤️ Here's a little note just for you: You're my everything, my love, my forever Valentine. Can't wait to cuddle and share chocolates! 🍫😍</p>
+        <img src="https://via.placeholder.com/300x300/ffb3d9/ffffff?text=Our+Picture" alt="Our cute picture">
+    </div>
+
+    <script>
+        function respond(answer) {
+            document.getElementById('response').innerHTML = `Yay! ${answer} I love you! 🎉`;
+            document.getElementById('note').style.display = 'block';
+        }
+        function noResponse() {
+            document.getElementById('response').innerHTML = `Oops! That button is broken... or maybe it's just destiny? 😉 Redirecting to YES in 3 seconds...`;
+            setTimeout(() => {
+                respond('Yes! (Forced by love)');
+            }, 3000);
+        }
+    </script>
+</body>
+</html>
